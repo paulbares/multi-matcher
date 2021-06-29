@@ -1,3 +1,20 @@
+# Fork
+
+This fork uses maven instead of grade and has all dependencies up-to-date (as of today; 2021-06-29).
+
+To compile:
+```bash
+mvn clean install
+```
+This creates a jar located at `benchmarks/target/benchmarks-jmh.jar` to be launched to run the JMH benchmarks.
+```bash
+java -jar benchmarks/target/benchmarks-jmh.jar
+```
+To run a single benchmark:
+```bash
+java -jar benchmarks/target/benchmarks-jmh.jar LogicalAggregationBenchmark
+```
+
 # multi-matcher
 [![Build Status](https://travis-ci.org/richardstartin/multi-matcher.svg?branch=master)](https://travis-ci.org/richardstartin/multi-matcher)
 [![Coverage Status](https://coveralls.io/repos/github/richardstartin/bitrules/badge.svg?branch=master)](https://coveralls.io/github/richardstartin/multi-matcher?branch=master)
