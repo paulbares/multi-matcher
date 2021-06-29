@@ -31,7 +31,7 @@ public class EnumAttribute<E extends Enum<E>, Input> implements Attribute<Input>
     @SuppressWarnings("unchecked")
     private Object2IntMap<E> newMap() {
         return new Object2IntOpenCustomHashMap<>(type.getEnumConstants().length,
-                1f, (Hash.Strategy<E>) STRATEGY);
+                .75f, (Hash.Strategy<E>) STRATEGY);
     }
 
     private static final EnumHashStrategy<?> STRATEGY = new EnumHashStrategy<>();
